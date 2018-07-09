@@ -60,7 +60,7 @@ if(!empty($_SESSION["Username"])){
       <div class='head'>
         <h1>Withdraw Page</h1>
       </div> </div>";
-  include "static/nav2.html";
+  include "static/adminnav.html";
   ?>
   <div class="">
     <?php if($message!="") echo "<div class='err_msg'>$message</div>"; ?>

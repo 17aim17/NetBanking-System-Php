@@ -8,7 +8,7 @@ echo " <div class='page-header'>
     <div class='head'>
       <h1>All Users </h1>
     </div> </div>";
-include "static/nav2.html";
+include "static/adminnav.html";
 
 
 
@@ -22,7 +22,7 @@ include "static/nav2.html";
     $f =$result["Email"];
     $g = $result["Phone"];
     $h = $result["Aadhar_number"];
-    $i = $result["Pancard_number"];
+    $i = $result["Address"];
     $j = $result["Photo"];
     $k = $result["Staus"];
     $l =$result["Date"];
@@ -61,7 +61,7 @@ echo"<table>
               <td>$h</td>
            </tr>
            <tr>
-              <th>PenCard No.</th>
+              <th>Address</th>
               <td>$i</td>
            </tr>
             <tr>

@@ -2,6 +2,15 @@
 include "static/header.html";
 $connection =mysqli_connect("localhost" ,"root" ,"","NetBanking");
 $message ="";
+echo "<title>Register Here</title>
+      <div class='page-header'>
+          <h1>User Registration </h1>
+      </div>
+      <div class='nav'>
+        <li> <a href='./index.php'>home</a></li>
+        <li> <a href='./user.php'>Sign In Insted</a></li>
+      </div>";
+
       function abc($imagetype){
             if(empty($imagetype)){ return false ;}
             switch ($imagetype) {
@@ -28,7 +37,7 @@ if(isset($_POST["register"])){
   $h =$_POST["email"];
   $i =$_POST["pn"];
   $j =$_POST["acn"];
-  $k=$_POST["pcn"];
+  $k=$_POST["add"];
  $date  =date("Y-m-d");
 
    $find = "SELECT * FROM Users WHERE Customer_id = '$a'";
@@ -99,7 +108,7 @@ if(isset($_POST["register"])){
   </tr>
   <tr>
     <th>Date Of Birth</th>
-    <td><input   class="input1" type="date" required name="dob" value=""> </td>
+    <td><input   class="datefield" type="date" required name="dob" value=""> </td>
   </tr>
   <tr>
     <th>Email</th>
@@ -114,8 +123,8 @@ if(isset($_POST["register"])){
     <td><input  class="input1" type="number" name="acn" value=""> </td>
   </tr>
   <tr>
-    <th>Pan card Number</th>
-    <td><input  class="input1" type="number"  name="pcn" value=""> </td>
+    <th>Full Address</th>
+    <td><input  class="input1" type="text"  name="add" value=""> </td>
   </tr>
   <tr>
     <th>Image</th>

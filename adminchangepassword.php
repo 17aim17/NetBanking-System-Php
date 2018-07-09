@@ -7,21 +7,21 @@ if(!empty($_POST["change"])){
   $op =$_POST["oldpassword"];
   $np1 =$_POST["newpassword"];
   $np2 =$_POST["newpassword2"];
-  if($np1==$np2){
-    $res = mysqli_query($connection ,"SELECT * FROM Admin WHERE Username='$un' AND Password ='$op'");
-    if($row=mysqli_fetch_array($res)){
-      $query = "UPDATE admin SET Password ='$np1' WHERE Username='$un'";
-      $res1=$connection->query($query);
-      if($res1){
-        $message ="Password Changed Successfully";
-      }
-      }
-    else  $message ="WRONG PASSWORD";
-   }
-  else
-  {
-  $message ="PASSWORD DOES NOT MATCH";
-   }
+
+  $result = mysqli_query($connection ,"SELECT * FROM Admin WHERE Username='$un' AND Password ='$op'");
+  $row = mysqli_num_rows($result);
+  if($row==1){
+     if($op!=$np1){
+       if($np1==$np2){
+         $query = "UPDATE admin SET Password ='$np1' WHERE Username='$un'";
+         $res1 =$connection->query($query);
+         if($res1){ $message="Password Changed Successfully"; }
+       } else{ $message="Passwords Does not match";}
+     } else {$message ="New Password Must be Different from old";}
+  }else{
+    $message ="Wrong  Password";
+  }
+
 }
 
 ?>
@@ -36,9 +36,9 @@ if(empty($_SESSION["Username"])) {?>
           <div class="head">
             <h1>Change Password Here</h1>
           </div>
-          <?php  include "static/nav2.html" ;?>
+          <?php  include "static/adminnav.html" ;?>
       </div>
-    <form class="" action="changepassword.php" method="post">
+    <form class="" action="" method="post">
        <div class="err_msg">
          <?php if($message!="") echo "$message";?>
        </div>

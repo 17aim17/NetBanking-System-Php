@@ -30,7 +30,7 @@ if(!empty($_SESSION["Username"])){
       <div class='head'>
         <h1>View Users Details</h1>
       </div> </div>";
-  include "static/nav2.html";
+  include "static/adminnav.html";
 ?>
 <form class="" action="viewcustomer.php" method="post">
   <?php if($message!="") echo "<div class='err_msg'>$message</div>"; ?>

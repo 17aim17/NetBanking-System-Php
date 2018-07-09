@@ -27,7 +27,12 @@ if(empty($_SESSION['Username'])){
           <div class="head">
             <h1>Admin login Area <br>Coporate use Only</h1>
           </div>
-          <?php  include "static/nav2.html" ;?>
+          <div class="nav">
+            <ul>
+              <li> <a href="index.php">Home</a> </li>
+              <li> <a  href="./admin.php">Admin Panel</a> </li> 
+            </ul>
+          </div>
       </div>
     <form class="form" action="admin.php" method="post">
       <div class="err_msg">
@@ -47,7 +52,7 @@ if(empty($_SESSION['Username'])){
 <?php  include "static/footer.html";
 }
  else{
-  include "adminrights.php";
+  include "adminpanel.php";
 
   include "static/footer.html";
 } ?>

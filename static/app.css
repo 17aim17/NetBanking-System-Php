@@ -177,3 +177,16 @@ html{
     letter-spacing: 2px;
     color: #008080;
   }
+  .datefield{
+    background: none;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  }
+  input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

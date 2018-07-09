@@ -13,7 +13,7 @@ $connection =mysqli_connect("localhost" ,"root" ,"" ,"NetBanking");
       <div class='head'>
         <h1>Get Mini Statement</h1>
       </div> </div>";
-  include "static/nav2.html";
+  include "static/adminnav.html";
 ?>
 <div>
 <form class= action="statement.php" method="post">

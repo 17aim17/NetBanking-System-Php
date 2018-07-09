@@ -4,7 +4,7 @@
      <h1>Welcome Admin <?php echo $_SESSION["Username"]; ?> <br> Here you hava following options</h1>
    </div>
      <div class="nav">
-      <li> <a href="changepassword.php">Change Password</a> </li>
+      <li> <a href="adminchangepassword.php">Change Password</a> </li>
       <li> <a href="authenticate.php">Authenticate User</a> </li>
       <li> <a href="viewcustomer.php">View Customers</a> </li>
       <li> <a href="viewall.php">View All</a> </li>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 07, 2018 at 11:30 AM
+-- Generation Time: Jul 09, 2018 at 12:40 PM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -37,18 +37,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Email` varchar(50) DEFAULT NULL,
   `Phone` varchar(50) NOT NULL,
   `Aadhar_number` varchar(50) DEFAULT NULL,
-  `Pancard_number` varchar(50) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
   `Photo` varchar(50) NOT NULL,
   `Staus` varchar(50) NOT NULL DEFAULT 'Pending',
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`Customer_id`),
-  UNIQUE KEY `Account_number` (`Account_number`,`Aadhar_number`,`Pancard_number`)
+  UNIQUE KEY `Account_number` (`Account_number`,`Aadhar_number`,`Address`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Customer_id`, `Account_number`, `Password`, `Name`, `Fathers_name`, `Balance`, `Gender`, `Date_of_birth`, `Email`, `Phone`, `Aadhar_number`, `Pancard_number`, `Photo`, `Staus`, `Date`) VALUES
-('104', '777777', 'hello', 'Amit', 'Summit', 0, 'male', '1978-01-08', 'xyz@abc.com', '551531', '5654897', '987979', '104.jpg', 'ACTIVATED', '2018-07-07 14:32:15'),
-('101', '555555', 'hello', 'Ajay', 'Mr. Pratap', 0, 'male', '1999-02-03', '99aps99@gmail.com', '65463', '9878986532', '32468', '101.jpg', 'Pending', '2018-07-07 00:00:00');
+INSERT INTO `users` (`Customer_id`, `Account_number`, `Password`, `Name`, `Fathers_name`, `Balance`, `Gender`, `Date_of_birth`, `Email`, `Phone`, `Aadhar_number`, `Address`, `Photo`, `Staus`, `Date`) VALUES
+('101', '1234567', 'user', 'User1', 'FUser', 0, 'male', '1990-09-07', 'user1@gmail.com', '+187638292', '', 'Mountain view , California', '101.jpg', 'Pending', '2018-07-09 00:00:00'),
+('102', '2345678', 'user2', 'User2', 'FUser2', 0, 'female', '1998-05-11', 'user2@gmail.com', '+1568939203', '987097890', '91 ,Bradford Street, Ny', '102.jpg', 'Pending', '2018-07-09 00:00:00');

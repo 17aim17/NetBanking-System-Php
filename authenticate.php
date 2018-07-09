@@ -8,7 +8,7 @@ if(!empty($_SESSION["Username"])){
       <div class='head'>
         <h1>All Pending Users</h1>
       </div>";
-    include "static/nav2.html" ;
+    include "static/adminnav.html" ;
   echo "</div>";
     if(!empty($_POST["Authenticate"])){
       $key = $_POST["t1"];
@@ -27,7 +27,7 @@ if(!empty($_SESSION["Username"])){
       $f = $result["Date_of_birth"];
       $g = $result["Phone"];
       $h = $result["Aadhar_number"];
-      $i = $result["Pancard_number"];
+      $i = $result["Address"];
       $j = $result["Photo"];
       $k = $result["Staus"];
       $l =$result["Date"];
@@ -66,7 +66,7 @@ if(!empty($_SESSION["Username"])){
                 <td>$h</td>
             </tr>
             <tr>
-                <th>PenCard Number</th>
+                <th>Address</th>
                 <td>$i</td>
             </tr>
             <tr>
