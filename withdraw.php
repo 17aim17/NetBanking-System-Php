@@ -56,11 +56,7 @@ if(!empty($_SESSION["account"]) &&!empty($_SESSION["balance"])){
  include "static/header.html";
 if(!empty($_SESSION["Username"])){
   echo "<title>Withdraw Page</title>";
-  echo " <div class='page-header'>
-      <div class='head'>
-        <h1>Withdraw Page</h1>
-      </div> </div>";
-  include "static/adminnav.html";
+  include "static/adminnav.php";
   ?>
   <div class="">
     <?php if($message!="") echo "<div class='err_msg'>$message</div>"; ?>

@@ -1,8 +1,10 @@
 <?php
     include"static/header.html";
+    session_start();
+    if(!empty($_SESSION["Customer_id"])){
+
     $connection =mysqli_connect("localhost","root","","NetBanking");
     $receiver="";
-    session_start();
     $un = $_SESSION["Customer_id"];
     $query ="SELECT * FROM Users WHERE Customer_id ='$un'";
     $result =$connection->query($query);
@@ -20,15 +22,7 @@
 
     ?>
 <title>Make Payment</title>
-    <div class='page-header'>
-        <div class='head'>
-          <h1>Transfer Money</h1>
-        </div>
-        <div class='nav'>
-           <li> <a href='./user.php'>User Panel</a></li>
-         </div>
-      </div>
-
+<?php include "static/usernav.php"; ?>
       <form class= action="" method="post">
             <table class="no-border">
               <tr>
@@ -108,4 +102,12 @@
     }
   }
 
+
+
+
+
+} else{
+
+  echo "<div class='err_msg'>Unauthorize access !! You can not Access this page Directly</div>";
+}
  ?>

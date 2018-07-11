@@ -4,17 +4,11 @@ include"static/header.html";
 $connection =mysqli_connect("localhost" ,"root","","NetBanking");
 if(!empty($_SESSION["Customer_id"])){
 $un =$_SESSION["Customer_id"];
-
+echo "<title>Account Statement</title>";
+include "static/usernav.php";
 ?>
-<title>Account Statement</title>
-    <div class='page-header'>
-        <div class='head'>
-          <h1>Get mini Statement</h1>
-        </div>
-        <div class='nav'>
-           <li> <a href='./user.php'>User Panel</a></li>
-         </div>
-      </div>";
+
+
 <form class="" action="" method="post">
   <table class="no-border">
     <tr>

@@ -3,9 +3,6 @@ include "static/header.html";
 $connection =mysqli_connect("localhost" ,"root" ,"","NetBanking");
 $message ="";
 echo "<title>Register Here</title>
-      <div class='page-header'>
-          <h1>User Registration </h1>
-      </div>
       <div class='nav'>
         <li> <a href='./index.php'>home</a></li>
         <li> <a href='./user.php'>Sign In Insted</a></li>

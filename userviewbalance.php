@@ -4,15 +4,8 @@ $connection =mysqli_connect("localhost" ,"root","","NetBanking");
 
 include"static/header.html";
 if(!empty($_SESSION["Customer_id"])){
-  echo "<title>Check Account Balance</title>
-      <div class='page-header'>
-          <div class='head'>
-            <h1>Check Account Balance</h1>
-          </div>
-          <div class='nav'>
-             <li> <a href='./user.php'>User Panel</a></li>
-           </div>
-        </div>";
+  echo "<title>Check Account Balance</title>";
+  include "static/usernav.php";
 $un =$_SESSION["Customer_id"];
 $balance ="SELECT * FROM Users WHERE Customer_id='$un'";
 $result =$connection->query($balance);

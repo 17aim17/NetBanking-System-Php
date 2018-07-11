@@ -32,12 +32,7 @@ if(empty($_SESSION["Username"])) {?>
 <div class='err_msg'>Unauthorize access !! You can not Access this page Directly</div>
 <?php } else {?>
   <title>Change Password</title>
-      <div class="page-header">
-          <div class="head">
-            <h1>Change Password Here</h1>
-          </div>
-          <?php  include "static/adminnav.html" ;?>
-      </div>
+          <?php  include "static/adminnav.php" ;?>
     <form class="" action="" method="post">
        <div class="err_msg">
          <?php if($message!="") echo "$message";?>

@@ -13,11 +13,14 @@ html{
           font-family:arial;
           text-transform: uppercase;
           text-align: center;
+          background-color: #EEEEEE;
+          color:#212121;
       }
       .page-header
       {
         width:100%;
-        background-color:#00FA9A;
+        color:#FAFAFA;
+        background-color:#212121;
       }
       h1{
         font-size: 2em;
@@ -28,7 +31,7 @@ html{
       }
       .nav{
         font-weight: bold;
-        background-color: #000;
+        background-color: #FAFAFA;
       }
       /* ul{
         display: inline;
@@ -43,12 +46,12 @@ html{
         padding: 1vw;
         letter-spacing: 1px;
         text-decoration: none;
-        color: #fff;
+        color: #212121;
         font-size: 2vh;
       }
       li:hover ,li a:hover{
-        background-color: #00FA9A;
-        color:#000;
+        background-color:#212121 ;
+        color:#FAFAFA;
       }
       .footer
       {
@@ -56,13 +59,13 @@ html{
         height: 1rem;
         font-weight: bold;
         letter-spacing: 1px;
-       color: #FFF;
+       color: #FAFAFA;
        position: absolute;
         bottom: 0;
        width: 97.6%;
        /* padding-right: 0.1%;  */
        text-align: center;
-       background-color: #000;
+       background-color: #212121;
        padding: 1rem;
     }
     .link1{
@@ -70,16 +73,16 @@ html{
       font-family:arial;
       font-size: 2vh;
       border: none;
-      color: #fff;
+      color: #212121;
       outline: none;
       cursor: pointer;
       font-weight: bold;
-      background-color: #000;
+      background-color: #FAFAFA;
       text-transform: uppercase;
     }
       .link1:hover{
-        background-color: #00FA9A;
-        color:#000;
+        background-color: #212121;
+        color:#FAFAFA;
       }
       .form{
         margin-top: 2vw;
@@ -90,6 +93,14 @@ html{
       font-weight: bold;
       text-align: center;
       color: #f50121;
+    }
+    .sucess_msg{
+      font-size: 3vh;
+      margin: 1vh;
+      letter-spacing: 1px;
+
+      text-align: center;
+      color: #2E8B57;
     }
     .label1{
       margin: 1rem;
@@ -146,7 +157,6 @@ html{
   }
 }
     table{
-      border: 1px solid #ddd;
       margin:  1em ;
       display:inline-flex;
       border-collapse: collapse;
@@ -157,7 +167,6 @@ html{
     }
     th{
       font-size: 1em;
-      font-weight: bold;
       text-align: justify;
     }
     td{
@@ -170,9 +179,6 @@ html{
     td .input1{
       width: 100%;
     }
-  .no-border{
-    border: none;
-  }
   .image{
     letter-spacing: 2px;
     color: #008080;

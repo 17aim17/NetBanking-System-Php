@@ -1,0 +1,37 @@
+body{
+  background: url("private/b4.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family:arial;
+}
+#box-container{
+  display:inline-flex;
+  align-self: center;
+  vertical-align: middle;
+  margin-top: 10rem;
+}
+#box-container a{
+  font: bold 1.1em Arial;
+  text-decoration: none;
+  background-color: lightblue;
+  color: #fff;
+  margin: 1em;
+  padding: 1.1em;
+  outline: none;
+  letter-spacing: 1px;
+  border-radius: 5%;
+  text-transform: uppercase;
+}
+@media screen and (max-width:480px) {
+  #box-container{
+    margin-top: 10vh;;
+    display: inline-block;
+  }
+  #box-container a{
+    transform: scale(.8);
+    display: block;
+    margin-top: 1em;
+  }
+}

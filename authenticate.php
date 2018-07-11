@@ -4,12 +4,7 @@ session_start();
 if(!empty($_SESSION["Username"])){
   include "static/header.html";
   echo "<title>Authenticate users </title>";
-  echo " <div class='page-header'>
-      <div class='head'>
-        <h1>All Pending Users</h1>
-      </div>";
-    include "static/adminnav.html" ;
-  echo "</div>";
+    include "static/adminnav.php" ;
     if(!empty($_POST["Authenticate"])){
       $key = $_POST["t1"];
       $modify = "UPDATE Users SET Staus ='ACTIVATED' WHERE Customer_id='$key'";

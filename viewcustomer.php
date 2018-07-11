@@ -26,11 +26,7 @@
 <?php   include "static/header.html";
 if(!empty($_SESSION["Username"])){
   echo "<title>View Users</title>";
-  echo " <div class='page-header'>
-      <div class='head'>
-        <h1>View Users Details</h1>
-      </div> </div>";
-  include "static/adminnav.html";
+  include "static/adminnav.php";
 ?>
 <form class="" action="viewcustomer.php" method="post">
   <?php if($message!="") echo "<div class='err_msg'>$message</div>"; ?>

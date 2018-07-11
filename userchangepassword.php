@@ -24,15 +24,8 @@
      }
   }
  if(!empty($_SESSION["Customer_id"])){
-   echo "<title>Change Password</title>
-       <div class='page-header'>
-           <div class='head'>
-             <h1>Change Password Here</h1>
-           </div>
-           <div class='nav'>
-              <li> <a href='./user.php'>User Panel</a></li>
-            </div>
-         </div>";
+   echo "<title>Change Password</title>";
+   include "static/usernav.php";
 ?>
    <form class="" action="" method="post">
      <?php if($message!="")  echo "<div class='err_msg'>$message</div>"; ?>

@@ -9,11 +9,7 @@ $connection =mysqli_connect("localhost" ,"root" ,"" ,"NetBanking");
 
 <?php if(!empty($_SESSION["Username"])){
   echo "<title>Get Customer Statement</title>";
-  echo " <div class='page-header'>
-      <div class='head'>
-        <h1>Get Mini Statement</h1>
-      </div> </div>";
-  include "static/adminnav.html";
+  include "static/adminnav.php";
 ?>
 <div>
 <form class= action="statement.php" method="post">

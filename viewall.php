@@ -4,14 +4,8 @@ include "static/header.html";
 if(!empty($_SESSION["Username"])){
 $connection =mysqli_connect("localhost","root" ,"" ,"NetBanking");
 echo "<title>List Of All Users</title>";
-echo " <div class='page-header'>
-    <div class='head'>
-      <h1>All Users </h1>
-    </div> </div>";
-include "static/adminnav.html";
 
-
-
+include "static/adminnav.php";
   $res2 =mysqli_query($connection , "SELECT * FROM Users");
   while($result =mysqli_fetch_array($res2)){
     $a = $result["Customer_id"];
@@ -26,7 +20,6 @@ include "static/adminnav.html";
     $j = $result["Photo"];
     $k = $result["Staus"];
     $l =$result["Date"];
-
 echo"<table>
           <tr>
               <th>Customer ID</th>
