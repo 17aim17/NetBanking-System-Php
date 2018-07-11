@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2018 at 12:40 PM
+-- Generation Time: Jul 11, 2018 at 08:20 AM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -33,9 +33,16 @@ CREATE TABLE IF NOT EXISTS `transactions` (
   `Type` varchar(255) NOT NULL,
   `Details` text NOT NULL,
   PRIMARY KEY (`Transaction_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `transactions`
 --
 
+INSERT INTO `transactions` (`Transaction_id`, `Account_number`, `Amount`, `Date_of_transaction`, `Type`, `Details`) VALUES
+(1, '1234567', 26, '2018-07-11 12:44:47', 'Debit', 'First Payment'),
+(2, '2345678', 26, '2018-07-11 12:44:47', 'Credit', 'First Payment'),
+(3, '1234567', 28, '2018-07-11 13:18:52', 'Debit', 'First Payment'),
+(4, '2345678', 28, '2018-07-11 13:18:52', 'Credit', 'First Payment'),
+(5, '1234567', 30, '2018-07-11 13:20:05', 'Debit', ''),
+(6, '2345678', 30, '2018-07-11 13:20:05', 'Credit', '');

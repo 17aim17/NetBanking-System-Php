@@ -30,10 +30,10 @@ html{
         font-weight: bold;
         background-color: #000;
       }
-      ul{
+      /* ul{
         display: inline;
         text-align: center;
-      }
+      } */
       li{
         cursor: pointer;
         list-style-type: none;

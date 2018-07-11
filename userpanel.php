@@ -17,7 +17,8 @@ if($row =mysqli_fetch_array($result)){
      <div class="nav">
       <li> <a href="userchangepassword.php">Change Password</a> </li>
       <li> <a href="userviewbalance.php">View Balance</a> </li>
-      <li> <a href="userstatement.php">Get Statement</a></li>
+      <li> <a href="userstatement.php">Acconnt summary</a></li>
+      <li> <a href="userpayment.php">Make Payment</a> </li>
       <li> <form class="" action="" method="post">
           <input type="submit" class="link1" name="logout" value="Logout">
       </form> </li>
