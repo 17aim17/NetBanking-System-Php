@@ -24,7 +24,7 @@
 <title>Make Payment</title>
 <?php include "static/usernav.php"; ?>
       <form class= action="" method="post">
-            <table class="no-border">
+            <table>
               <tr>
                 <th>My Balance</th>
                 <td> <input type="text" class="input1" readonly  value="<?php echo $mybalance ?>"> </td>
@@ -50,6 +50,7 @@
                          $name =  $res2["Name"];
                          $fname =$res2["Fathers_name"];
                          $_SESSION["recbalance"]= $res2["Balance"];
+                          $_SESSION["cid2"] =$res2["Customer_id"];
                          include "recieverdetails.inc";
                        }
                     }
@@ -69,12 +70,16 @@
     if($mybalance>$amount){
       $remarks =$_POST["remarks"];
       $recbalance=$_SESSION["recbalance"];
+      $tid1 ="AS".date('Y').$_SESSION["Customer_id"].time();
+      $tid2 ="AS".date('Y').$_SESSION["cid2"].time();
+      echo "$tid1  ";
+      echo "$tid2";
       //insert into transaction table my own
-      $insert1 ="INSERT INTO Transactions (Account_number,Amount,Type,Details) VALUES ('$myaccount',$amount,'Debit','$remarks')";
+      $insert1 ="INSERT INTO Transactions (Transaction_id , Account_number,Amount,Type,Details) VALUES ('$tid1','$myaccount',$amount,'Debit','$remarks')";
       $result1 =$connection->query($insert1);
 
       // insert recierve transcation ie credit
-      $insert2 ="INSERT INTO Transactions (Account_number,Amount,Type,Details) VALUES ('$receiver',$amount,'Credit','$remarks')";
+      $insert2 ="INSERT INTO Transactions (Transaction_id ,Account_number,Amount,Type,Details) VALUES ('$tid2','$receiver',$amount,'Credit','$remarks')";
       $result2 =$connection->query($insert2);
 
       //updating own balance
@@ -87,12 +92,12 @@
       $update2 ="UPDATE Users SET Balance =$recbalance WHERE Account_number=$receiver";
       $result4 =$connection->query($update2);
 
-      //inserting into
-      $insert3 ="INSERT INTO Payment(Transfer_from ,Transfer_to ,Amount ,Remarks) VALUES ('$myaccount','$receiver',$amount,'$remarks')";
+      //inserting into payment table
+      $insert3 ="INSERT INTO Payment(Transaction_id , Transfer_from ,Transfer_to ,Amount ,Remarks) VALUES ('$tid1' ,'$myaccount','$receiver',$amount,'$remarks')";
       $result5 =$connection->query($insert3);
 
       if($result5){
-        echo "<div>Payment Successful</div>";
+        echo "<div class='sucess_msg'>Payment Successful</div>";
       }
       unset($_SESSION["recbalance"]);
       $receiver ="";

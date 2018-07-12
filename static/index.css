@@ -1,10 +1,16 @@
-body{
+*{
+  margin: 0;
+  padding: 0;
+
+}
+header{
   background: url("private/b4.jpg") no-repeat center center;
+  height: 768px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:arial;
+  font-family:Fira Sans , Arial , sans-serif;
 }
 #box-container{
   display:inline-flex;
@@ -13,7 +19,7 @@ body{
   margin-top: 10rem;
 }
 #box-container a{
-  font: bold 1.1em Arial;
+  font: bold 1.1em Fira Sans;
   text-decoration: none;
   background-color: lightblue;
   color: #fff;
@@ -34,4 +40,10 @@ body{
     display: block;
     margin-top: 1em;
   }
+}
+#au{
+    transition: all 5s;
+    text-align: justify;
+    width: 80%;
+    margin:0 auto;
 }

@@ -10,7 +10,7 @@ include "static/usernav.php";
 
 
 <form class="" action="" method="post">
-  <table class="no-border">
+  <table class="">
     <tr>
       <td>Start Date</td>
       <td> <input type="date" class="datefield" name="sd" value=""> </td>
@@ -38,7 +38,7 @@ if(isset($_POST["st"])){
       // echo "$query";
       $result2 =$connection->query($query);
       if($found =mysqli_num_rows($result2)){
-        echo "<table class='no-border'>
+        echo "<div class='res-tb'><table class='table1'>
           <tr><th>Transaction ID</th>
           <th>Amount</th>
           <th>Date</th>
@@ -59,7 +59,7 @@ if(isset($_POST["st"])){
                   <td>$e</td>
                </tr>";
         }
-        echo "</table>";
+        echo "</table></div>";
       } else{
         echo "<span class='err_msg'>No transactions on during selected period</span>";
       }

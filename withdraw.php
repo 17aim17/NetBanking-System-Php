@@ -14,6 +14,8 @@ if(isset($_POST["view"])){
   if($row){
     $name = $row["Name"];
     $fname =$row["Fathers_name"];
+    $cid =$row["Customer_id"];
+    $_SESSION["cid"]=$cid;
     $_SESSION["account"] =$row["Account_number"];
     $balance =$row["Balance"];
     $_SESSION["balance"] =$balance;
@@ -27,12 +29,13 @@ if(isset($_POST["view"])){
 if(!empty($_SESSION["account"]) &&!empty($_SESSION["balance"])){
    $accno =$_SESSION["account"];
    $currentbalance=$_SESSION["balance"];
+   $tid ="AS".date('Y').$_SESSION["cid"].time();
     if(isset($_POST["deposit"])){
         if(!empty($_POST["amount"])){
           $amount =$_POST["amount"];
           $details =$_POST["details"];
           if($currentbalance>$amount){
-            $insert ="INSERT INTO Transactions( Account_number ,Amount,Type,Details) VALUES ('$accno' ,$amount ,'Debit','$details')";
+            $insert ="INSERT INTO Transactions(Transaction_id, Account_number ,Amount,Type,Details) VALUES ('$tid' ,'$accno' ,$amount ,'Debit','$details')";
             $res2 =$connection->query($insert);
             $newbalance = $currentbalance - $amount;
             $update ="UPDATE Users SET Balance =$newbalance WHERE Account_number='$accno'";

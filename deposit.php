@@ -14,6 +14,8 @@ if(isset($_POST["view"])){
   if($row){
     $name = $row["Name"];
     $fname =$row["Fathers_name"];
+    $cid =  $row["Customer_id"];
+    $_SESSION["cid"] =$cid;
     $_SESSION["account"] =$row["Account_number"];
     $balance =$row["Balance"];
     $_SESSION["balance"] =$balance;
@@ -27,11 +29,12 @@ if(isset($_POST["view"])){
 if(!empty($_SESSION["account"]) &&!empty($_SESSION["balance"])){
    $accno =$_SESSION["account"];
    $currentbalance=$_SESSION["balance"];
+   $tid ="AS".date('Y').$_SESSION["cid"].time();
     if(isset($_POST["deposit"])){
         if(!empty($_POST["amount"])){
           $amount =$_POST["amount"];
           $tod =$_POST["tod"];
-          $insert ="INSERT INTO Transactions ( Account_number ,Amount, Type ,Details) VALUES ('$accno' ,$amount ,'Credit','$tod')";
+          $insert ="INSERT INTO Transactions (Transaction_id, Account_number ,Amount, Type ,Details) VALUES ('$tid','$accno' ,$amount ,'Credit','$tod')";
           $res2 =$connection->query($insert);
           $newbalance = $currentbalance + $amount;
           $update ="UPDATE Users SET Balance =$newbalance WHERE Account_number='$accno'";
@@ -80,7 +83,7 @@ if(!empty($_SESSION["Username"])){
         <td> <input type="number" readonly name="balance" class="input1" readonly value="<?php echo $balance ?>"> </td>
       </tr>
        <tr>
-         <td style="text-align:center"colspan="2"><span class="err_msg">Deposit Details Fill Here</span></td>
+         <td style="text-align:center"colspan="2"><span class="sucess_msg">Deposit Details Fill Here</span></td>
        </tr>
        <tr>
          <td><span class="label1">Credit Amount</span></td>

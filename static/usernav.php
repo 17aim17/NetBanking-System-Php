@@ -1,8 +1,4 @@
-<div class="page-header">
-  <div class="head">
-    <!-- <img src="" alt=""> -->
-      <h1>Welcome To <br>bAnk of cHicAGo</h1>
-  </div>
+<?php  include"page-header.inc" ;?>
      <div class="nav">
       <li> <a href="userchangepassword.php">Change Password</a> </li>
       <li> <a href="userviewbalance.php">View Balance</a> </li>

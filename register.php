@@ -74,7 +74,7 @@ if(isset($_POST["register"])){
 
 <form class="" action="register.php" method="post" enctype="multipart/form-data">
   <?php if($message!=""){echo "<div class='err_msg'>$message</div>";} ?>
-  <table class="no-border">
+  <table>
   <tr>
     <th>Customer ID</th>
     <td><input   class="input1" type="number" required name="cid" value=""> </td>

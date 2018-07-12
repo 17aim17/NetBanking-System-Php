@@ -16,7 +16,7 @@ while($res =mysqli_fetch_array($result)){
   $d =$res["Fathers_name"];
   $e =$res["Balance"];
 
-  echo "<table class='no-border'>
+  echo "<div class='res-tb'><table class='table1'>
        <tr>
           <th>Customer ID</th>
           <td>  $a </td>
@@ -37,7 +37,7 @@ while($res =mysqli_fetch_array($result)){
           <th>Account Balance</th>
           <td>  $e </td>
        </tr>
-  </table>";
+  </table></div>";
 }
 } else{
   echo "<div class='err_msg'>Unauthorize access !! You can not Access this page Directly</div>";

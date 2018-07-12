@@ -13,13 +13,10 @@ $connection =mysqli_connect("localhost" ,"root" ,"" ,"NetBanking");
 ?>
 <div>
 <form class= action="statement.php" method="post">
-  <table class="no-border">
+  <table>
     <tr>
-      <th class="no-border">Account number :</th>
-      <td class="no-border"> <input type="text" class="input1" name="accno" value="<?php echo $accno ?>"> </td>
-    </tr>
-    <tr>
-      <td class="no-border" style="text-align:center" colspan="2"> <input type="submit" class="simplebutton" name="get" value="Get Statement"> </td>
+      <td> <input type="text" class="input1" name="accno" placeholder="Account Number" value="<?php echo $accno ?>"> </td>
+      <td><input type="submit" class="simplebutton" name="get" value="Get Statement"> </td>
     </tr>
   </table>
 </form>
@@ -40,7 +37,7 @@ $connection =mysqli_connect("localhost" ,"root" ,"" ,"NetBanking");
          $res =$connection->query($get);
          $row=mysqli_num_rows($res);
      if($row>0){
-           echo "<div class='flex1'><table class='no-border'> <tr>
+           echo "<div class='res-tb'><table class='table1'> <tr>
                    <th>Transaction Id</th>
                    <th>Amount</th>
                    <th>Type</th>
