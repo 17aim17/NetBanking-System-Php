@@ -1,8 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
 
-}
 header{
   background: url("private/b4.jpg") no-repeat center center;
   height: 768px;
@@ -19,7 +15,8 @@ header{
   margin-top: 10rem;
 }
 #box-container a{
-  font: bold 1.1em Fira Sans;
+  font: bold 1.1em ;
+  font-family: Fira Sans ,Arial;
   text-decoration: none;
   background-color: lightblue;
   color: #fff;
@@ -41,9 +38,21 @@ header{
     margin-top: 1em;
   }
 }
-#au{
+#au,#nb{
+   display: inline-block;
     transition: all 5s;
-    text-align: justify;
+    text-align: left;
     width: 80%;
-    margin:0 auto;
+
+}
+.au li ,.au p ,h3{
+  display: block;
+  text-align: justify;
+}
+#nb{
+   display: inline-block;
+    transition: all 5s;
+    text-align: left;
+    width: 80%;
+
 }

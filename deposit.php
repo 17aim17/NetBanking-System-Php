@@ -26,7 +26,7 @@ if(isset($_POST["view"])){
   }
 }
 
-if(!empty($_SESSION["account"]) &&!empty($_SESSION["balance"])){
+if(!empty($_SESSION["account"])){
    $accno =$_SESSION["account"];
    $currentbalance=$_SESSION["balance"];
    $tid ="AS".date('Y').$_SESSION["cid"].time();

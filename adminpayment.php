@@ -44,7 +44,7 @@ if(!empty($_SESSION["Username"])){
                 </tr>";
          }
          echo "</table> </div>";
-         include "static/footer.html";
+         
    }else{
      echo "<div class='err_msg'>No Records </div>";
    }

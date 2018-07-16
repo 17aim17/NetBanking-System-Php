@@ -7,7 +7,6 @@ if(!empty($_SESSION["Username"])){
     $a =$_SESSION["Username"];
     echo "<title>Admin Dashboard</title>";
     echo "<p class='sucess_msg'>welcome $a</p>";
-    include "static/footer.html";
   } else{
     echo "<div class='err_msg'>Unauthorize Access !! You can not Access this page directly </div>";
   }

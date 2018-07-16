@@ -30,7 +30,7 @@ if(!empty($_SESSION["Username"])){
                             <td>$a</td>
                             <td>$n</td>
                             <td>$b</td>
-                            <td><input type='submit' class='simplebutton' name='search' value='Search'></td>
+                            <td><input type='submit' class='simplebutton' name='search' value='Search'></form></td>
                           </tr> ";
                     }
           echo "</table></div>";

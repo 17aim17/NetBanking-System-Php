@@ -27,7 +27,7 @@
             <table>
               <tr>
                 <th>My Balance</th>
-                <td> <input type="text" class="input1" readonly  value="<?php echo $mybalance ?>"> </td>
+                <td> <input type="number" class="input1" readonly  value="<?php echo $mybalance ?>"> </td>
               </tr>
               <tr>
                 <th>Recipient Account number</th>

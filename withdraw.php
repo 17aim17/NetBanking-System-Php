@@ -26,7 +26,7 @@ if(isset($_POST["view"])){
   }
 }
 
-if(!empty($_SESSION["account"]) &&!empty($_SESSION["balance"])){
+if(!empty($_SESSION["account"])){
    $accno =$_SESSION["account"];
    $currentbalance=$_SESSION["balance"];
    $tid ="AS".date('Y').$_SESSION["cid"].time();
@@ -86,7 +86,7 @@ if(!empty($_SESSION["Username"])){
         <td> <input type="number" readonly name="balance" class="input1" readonly value="<?php echo $balance ?>"> </td>
       </tr>
        <tr>
-         <td style="text-align:center"colspan="2"><span class="err_msg">Withdraw Details Fill Here</span></td>
+         <td style="text-align:center"colspan="2"><span class="sucess_msg">Withdraw Details Fill Here</span></td>
        </tr>
        <tr>
          <td><span class="label1">Debit Amount</span></td>

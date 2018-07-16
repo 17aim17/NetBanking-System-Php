@@ -5,7 +5,7 @@ $message ="";
 echo "<title>Register Here</title>
       <div class='nav'>
         <li> <a href='./index.php'>home</a></li>
-        <li> <a href='./user.php'>Sign In Insted</a></li>
+        <li> <a href='./user_login.php'>Sign In Insted</a></li>
       </div>";
 
       function abc($imagetype){
@@ -56,7 +56,7 @@ if(isset($_POST["register"])){
          echo "d";
          if(move_uploaded_file($temp_name,$target)){
            echo "e";
-           $query ="INSERT INTO Users VALUES('$a','$b','$c1','$d' ,'$e' ,0 ,'$f' ,'$g' ,'$h' ,'$i' ,'$j' ,'$k','$imagename' ,'Pending' ,'$date')";
+           $query ="INSERT INTO Users VALUES('$a','$b','$c1','$d' ,'$e' ,10 ,'$f' ,'$g' ,'$h' ,'$i' ,'$j' ,'$k','$imagename' ,'Pending' ,'$date')";
            $result =$connection->query($query);
             echo "f";
             if($result){ echo "g"; $message ="Form Submit Succesfuly Wait for Authentiction" ;}
@@ -77,11 +77,11 @@ if(isset($_POST["register"])){
   <table>
   <tr>
     <th>Customer ID</th>
-    <td><input   class="input1" type="number" required name="cid" value=""> </td>
+    <td><input   class="input1" type="text" required name="cid" value=""> </td>
   </tr>
   <tr>
     <th>Account Number</th>
-    <td><input  class="input1" type="number" required name="an" value=""> </td>
+    <td><input  class="input1" type="text" required name="an" value=""> </td>
   </tr>
   <tr>
     <th>Choose Password</th>

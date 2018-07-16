@@ -8,10 +8,10 @@ if(!empty($_SESSION["Username"])){
     include "static/adminnav.php" ;
     if(!empty($_POST["Authenticate"])){
       $key = $_POST["t1"];
-      $modify = "UPDATE Users SET Staus ='Activated' WHERE Account_number='$key'";
+      $modify = "UPDATE Users SET Status ='Activated' WHERE Account_number='$key'";
       $res =$connection->query($modify);
       }
-      $res2 =mysqli_query($connection , "SELECT * FROM Users WHERE Staus='Pending'");
+      $res2 =mysqli_query($connection , "SELECT * FROM Users WHERE Status='Pending'");
       $row =mysqli_num_rows($res2);
       if($row>0){
 ?>
@@ -44,7 +44,6 @@ if(!empty($_SESSION["Username"])){
                 </tr>";
          }
          echo "</table> </div>";
-         include "static/footer.html";
    }else{
      echo "<div class='err_msg'>No Users </div>";
    }

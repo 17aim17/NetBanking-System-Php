@@ -51,4 +51,4 @@ if(empty($_SESSION["Username"])) {?>
             </div>
 
     </form>
-<?php include "static/footer.html" ; } ?>
+<?php } ?>

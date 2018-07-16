@@ -7,7 +7,7 @@
       <li> <a href="viewall.php">View All</a> </li>
       <li> <a href="deposit.php">Deposit</a> </li>
       <li> <a href="withdraw.php">Withdraw</a></li>
-      <li> <a href="cheque.php">Cheque </a> </li>
+      <!-- <li> <a href="cheque.php">Cheque </a> </li> -->
       <li> <a href="adminpayment.php">transfers</a> </li>
       <li> <a href="statement.php">Statement</a></li>
       <li> <form class="" action="" method="post">

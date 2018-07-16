@@ -41,7 +41,7 @@ if(isset($_POST["search"])){
                 $j = $result["Aadhar_number"];
                 $k = $result["Address"];
                 $l = $result["Photo"];
-                $m = $result["Staus"];
+                $m = $result["Status"];
                 $n =$result["Date"];
               }
 

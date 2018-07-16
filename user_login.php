@@ -8,8 +8,8 @@ if(!empty($_POST["login"]))
   $result = mysqli_query($connection ,"SELECT * FROM Users WHERE Customer_id  ='$Customer_id' AND Password ='$Password'");
 
   if( $row =mysqli_fetch_array($result)){
-    $status = $row["Staus"];
-      if($status!="ACTIVATED"){
+    $status = $row["Status"];
+      if($status!="Activated"){
         $message ="You can not login untill you are verified";
       } else{
       $_SESSION["Customer_id"] =$row["Customer_id"];

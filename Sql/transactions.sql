@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2018 at 02:22 PM
+-- Generation Time: Jul 14, 2018 at 07:30 AM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -27,11 +27,11 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `transactions` (
   `Transaction_id` varchar(32) NOT NULL,
-  `Account_number` varchar(255) NOT NULL,
+  `Account_number` char(12) NOT NULL,
   `Amount` double NOT NULL,
   `Date_of_transaction` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Type` varchar(255) NOT NULL,
-  `Details` text NOT NULL,
+  `Type` varchar(30) NOT NULL,
+  `Details` varchar(255) NOT NULL,
   PRIMARY KEY (`Transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -40,9 +40,5 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 --
 
 INSERT INTO `transactions` (`Transaction_id`, `Account_number`, `Amount`, `Date_of_transaction`, `Type`, `Details`) VALUES
-('AS20181011531402152', '1234567', 29, '2018-07-12 18:59:12', 'Credit', 'unique id'),
-('AS20181011531402170', '1234567', 29, '2018-07-12 18:59:30', 'Debit', 'unique id 2'),
-('AS20181011531402849', '1234567', 333, '2018-07-12 19:10:49', 'Debit', 'unique id 3'),
-('AS20181021531402849', '2345678', 333, '2018-07-12 19:10:49', 'Credit', 'unique id 3'),
-('AS20181011531404042', '1234567', 25, '2018-07-12 19:30:42', 'Debit', 'unique id 4'),
-('AS20181021531404042', '2345678', 25, '2018-07-12 19:30:42', 'Credit', 'unique id 4');
+('AS20181061531552756', '987654321', 90, '2018-07-14 12:49:16', 'Credit', 'first deposit'),
+('AS20181061531552779', '987654321', 66, '2018-07-14 12:49:39', 'Debit', 'first deposit');
