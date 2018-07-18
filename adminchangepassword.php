@@ -1,6 +1,6 @@
 <?php
 $message ="";
-$connection =mysqli_connect("localhost" ,"root","","NetBanking");
+require_once("connect.php");
 session_start();
 if(!empty($_POST["change"])){
   $un =$_SESSION["Username"];

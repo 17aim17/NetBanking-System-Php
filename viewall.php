@@ -2,7 +2,7 @@
 session_start();
 include "static/header.html";
 if(!empty($_SESSION["Username"])){
-          $connection =mysqli_connect("localhost","root" ,"" ,"NetBanking");
+          require_once("connect.php");
           echo "<title>List Of All Users</title>";
           static $i=0;
           include "static/adminnav.php";

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include"static/header.html";
-$connection =mysqli_connect("localhost" ,"root","","NetBanking");
+require_once("connect.php");
 if(!empty($_SESSION["Customer_id"])){
 $un =$_SESSION["Customer_id"];
 echo "<title>Account Statement</title>";

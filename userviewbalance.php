@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connection =mysqli_connect("localhost" ,"root","","NetBanking");
+require_once("connect.php");
 
 include"static/header.html";
 if(!empty($_SESSION["Customer_id"])){

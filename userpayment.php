@@ -2,8 +2,7 @@
     include"static/header.html";
     session_start();
     if(!empty($_SESSION["Customer_id"])){
-
-    $connection =mysqli_connect("localhost","root","","NetBanking");
+      require_once("connect.php");
     $receiver="";
     $un = $_SESSION["Customer_id"];
     $query ="SELECT * FROM Users WHERE Customer_id ='$un'";

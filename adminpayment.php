@@ -1,5 +1,5 @@
 <?php
-$connection =mysqli_connect("localhost","root","","NetBanking");
+require_once("connect.php");
 session_start();
 $i=0;
 if(!empty($_SESSION["Username"])){
@@ -44,7 +44,7 @@ if(!empty($_SESSION["Username"])){
                 </tr>";
          }
          echo "</table> </div>";
-         
+
    }else{
      echo "<div class='err_msg'>No Records </div>";
    }

@@ -1,6 +1,6 @@
 <?php
 include "static/header.html";
-$connection =mysqli_connect("localhost" ,"root" ,"","NetBanking");
+require_once("connect.php");
 $message ="";
 echo "<title>Register Here</title>
       <div class='nav'>

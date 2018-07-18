@@ -2,7 +2,7 @@
 $a ="";
 include "static/header.html";
 include "static/adminnav.php";
-$connection =mysqli_connect("localhost","root" ,"" ,"NetBanking");
+require_once("connect.php");
 if(isset($_POST['finduser'])){
   $a =$_POST["finduser"];
 }

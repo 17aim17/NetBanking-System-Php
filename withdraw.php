@@ -5,7 +5,7 @@ $fname ="";
 $message ="";
 $balance ="";
 session_start();
-$connection=mysqli_connect("localhost","root","","Netbanking");
+require_once("connect.php");
 if(isset($_POST["view"])){
   $accno =$_POST["accno"];
   $query ="SELECT * FROM Users WHERE Account_number='$accno'";

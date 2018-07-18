@@ -1,5 +1,5 @@
 <?php
-$connection =mysqli_connect("localhost" ,"root" ,"" ,"NetBanking");
+require_once("connect.php");
 session_start();
 if(!empty($_POST["login"]))
 {
