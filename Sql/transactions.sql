@@ -25,7 +25,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `transactions`
 --
 
-CREATE TABLE IF NOT EXISTS `transactions` (
+CREATE TABLE IF NOT EXISTS `Transactions` (
   `Transaction_id` varchar(32) NOT NULL,
   `Account_number` char(12) NOT NULL,
   `Amount` double NOT NULL,
@@ -39,6 +39,6 @@ CREATE TABLE IF NOT EXISTS `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`Transaction_id`, `Account_number`, `Amount`, `Date_of_transaction`, `Type`, `Details`) VALUES
+INSERT INTO `Transactions` (`Transaction_id`, `Account_number`, `Amount`, `Date_of_transaction`, `Type`, `Details`) VALUES
 ('AS20181061531552756', '987654321', 90, '2018-07-14 12:49:16', 'Credit', 'first deposit'),
 ('AS20181061531552779', '987654321', 66, '2018-07-14 12:49:39', 'Debit', 'first deposit');
