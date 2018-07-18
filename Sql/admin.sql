@@ -25,7 +25,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
+CREATE TABLE IF NOT EXISTS `Admin` (
   `Username` varchar(30) NOT NULL,
   `Password` varchar(30) NOT NULL,
   PRIMARY KEY (`Username`)
@@ -35,5 +35,5 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`Username`, `Password`) VALUES
+INSERT INTO `Admin` (`Username`, `Password`) VALUES
 ('admin', 'admin');
