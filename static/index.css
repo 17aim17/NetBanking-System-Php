@@ -46,8 +46,8 @@ body{
   background-color: #0984e3;
   border:1px solid  #0984e3;
 }
-.btn-full:hover,
-.btn-full:active{
+.btn:hover,
+.btn:active{
   background-color: #0871c2;
   border:1px solid #0871c2;
 }

@@ -28,9 +28,9 @@ body
         background-color:#212121;
       }
       h1{
-        display: flex;
+        text-align: center;
         margin: 0 auto;
-        font-size: 185%;
+        font-size: 195%;
         padding: 1.14em;
       }
       .head{

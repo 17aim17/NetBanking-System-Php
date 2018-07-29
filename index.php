@@ -17,7 +17,7 @@
   <header>
        <nav>
          <div class="row">
-          <a href="./index.php"><img src="./static/private/ourlogowhite.png" alt="our logo" class="logo"></a>  
+          <a href="./index.php"><img src="./static/private/ourlogowhite.png" alt="our logo" class="logo"></a>
              <ul class="main-nav">
                <li> <a  href="./index.php">Home</a> </li>
                <li> <a  href="#au">ABOUT Us</a> </li>
@@ -28,8 +28,8 @@
        </nav>
        <div class="hero-text-box">
          <h1 id="heading">Welcome To Federal bAnk of cHicAGo</h1>
-         <a class="btn btn-full" href="user_login.php">USER LOGIN</a>
-         <a class="btn btn-ghost" href="admin_login.php">ADMIN LOGIN</a>
+         <a class="btn " href="user_login.php">USER LOGIN</a>
+         <a class="btn " href="admin_login.php">ADMIN LOGIN</a>
        </div>
      </header>
 
