@@ -1,11 +1,11 @@
 <?php
-session_start();
+require_once("connect.php");
+  session_start();
   include"static/header.html";
-  require_once("connect.php");
   if(!empty($_SESSION["Customer_id"])){
   $un =$_SESSION["Customer_id"];
   $find ="SELECT Account_number FROM Users WHERE Customer_id ='$un'";
-  $result=   $connection->query($find);
+  $result= $connection->query($find);
       if($row =mysqli_fetch_array($result))
       {
         $acc =$row["Account_number"];
@@ -36,33 +36,34 @@ session_start();
               echo "<div class='err_msg'>Please choose from 10 t0 50 Only</div>";
             }
       }
-?>
-
-
-<?php
-  $acc =$_SESSION["acc"];
-  $status = "SELECT Status FROM Cheque WHERE Account_number ='$acc'";
-  $result3 =$connection->query($query);
-  if($res3 =mysqli_fetch_array($result3))
-  {
-    $s =$res3["Status"];
-    if($s!="Delievered")
-    {
-
- ?>
-<form class="" action="" method="post">
-  <table class="">
-    <tr>
-      <td> <input type="number" class="input1" name="number" required placeholder="Number of checks" value=""> </td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><input type="submit" class="simplebutton" name="apply" value="Apply"> </td>
-    </tr>
-  </table>
-</form>
-<?php
-  }
-}
-}else
-  echo "<div class='err_msg'>Unauthorize access !! You can not Access this page Directly</div>";
- ?>
+      function isapplied()
+      {
+        global $connection;
+        $acc =$_SESSION['acc'];
+        $x ="SELECT * FROM Cheque WHERE Account_number='$acc' AND Status='Pending' ";
+        $res =$connection->query($x);
+        $row =mysqli_num_rows($res);
+        if($row==0){
+          return false;
+        }
+        return true;
+      }
+    if(isapplied())
+     {
+       echo "<div class='sucess_msg'>You already applied for checkbook</div>";
+     }
+     else{
+      echo '<form class="" action="" method="post">
+        <table class="">
+          <tr>
+            <td> <input type="number" class="input1" name="number" required placeholder="Number of checks" value=""> </td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><input type="submit" class="simplebutton" name="apply" value="Apply"> </td>
+          </tr>
+        </table>
+      </form>';
+    }
+} else {
+echo "<div class='err_msg'>Unauthorize access !! You can not Access this page Directly</div>";
+} ?>
