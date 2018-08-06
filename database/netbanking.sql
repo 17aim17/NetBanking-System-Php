@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 29, 2018 at 09:42 AM
+-- Generation Time: Aug 01, 2018 at 08:08 AM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -57,6 +57,8 @@ CREATE TABLE IF NOT EXISTS `cheque` (
 -- Dumping data for table `cheque`
 --
 
+INSERT INTO `cheque` (`Request_id`, `Account_number`, `Num_of_cheques`, `Request_date`, `Status`) VALUES
+(1, '2345678', 20, '2018-08-01 11:20:44', 'Delievered');
 
 -- --------------------------------------------------------
 
