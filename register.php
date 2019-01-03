@@ -11,7 +11,7 @@ echo "<title>Register Here</title>
       function abc($imagetype){
             if(empty($imagetype)){ return false ;}
             switch ($imagetype) {
-              case 'image/bmp':
+                case 'image/bmp':
                     return ".bmp";
               case 'image/jpeg':
                     return ".jpg";
@@ -43,9 +43,9 @@ if(isset($_POST["register"])){
 
     if($row==0){
      if($c1==$c2){
-       echo "b";
+     
        if(!empty($_FILES["file1"]["name"])){
-         echo "c";
+       
          $file_name =$_FILES["file1"]["name"];
          $temp_name =$_FILES["file1"]["tmp_name"];
          $imagetype =$_FILES["file1"]["type"];
@@ -53,13 +53,13 @@ if(isset($_POST["register"])){
          $extension =abc($imagetype);
          $imagename =$a.$extension;
          $target = "./photos/".$imagename;
-         echo "d";
+      
          if(move_uploaded_file($temp_name,$target)){
-           echo "e";
+         
            $query ="INSERT INTO Users VALUES('$a','$b','$c1','$d' ,'$e' ,10 ,'$f' ,'$g' ,'$h' ,'$i' ,'$j' ,'$k','$imagename' ,'Pending' ,'$date')";
            $result =$connection->query($query);
-            echo "f";
-            if($result){ echo "g"; $message ="Form Submit Succesfuly Wait for Authentiction" ;}
+         
+            if($result){  $message ="Form Submit Succesfuly Wait for Authentiction" ;}
             else { $message ="Sorry Error occured please try again later" ;}
          }
        }

@@ -11,7 +11,7 @@ require_once("connect.php");
         $acc =$row["Account_number"];
         $_SESSION["acc"] =$acc;
       }
-      echo "<title>Request For check book</title>";
+      echo "<title>Request For cheque book</title>";
       include "static/usernav.php";
       if(isset($_POST["apply"]))
       {
@@ -50,7 +50,7 @@ require_once("connect.php");
       }
     if(isapplied())
      {
-       echo "<div class='sucess_msg'>You already applied for checkbook</div>";
+       echo "<div class='sucess_msg'>You already applied for cheque book</div>";
      }
      else{
       echo '<form class="" action="" method="post">

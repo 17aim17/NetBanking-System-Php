@@ -27,7 +27,8 @@
          </div>
        </nav>
        <div class="hero-text-box">
-         <h1 id="heading">Welcome To Federal bAnk of cHicAGo</h1>
+         <h1 id="heading">Welcome To My Bank</h1>
+         
          <a class="btn " href="user_login.php">USER LOGIN</a>
          <a class="btn " href="admin_login.php">ADMIN LOGIN</a>
        </div>
